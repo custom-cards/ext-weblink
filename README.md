@@ -10,6 +10,7 @@ This element is **not** all that useful as a card (it can be used for that to), 
 | name | string | **Required** | The name you want to show.
 | url | string | **Required** | The url you want to open.
 | icon | string | **Required** | The icon you want to show.
+| entity | string | **Optional** | The entity you want to the state from (if defined).
 
 ## Installation
 
@@ -47,6 +48,7 @@ Add a custom element in your `ui-lovelace.yaml`
       name: Home Assistant
       url: https://www.home-assistant.io/
       icon: mdi:home-assistant
+      entity: sensor.commute_to_home
 ```
 
 **Give this result:**\
