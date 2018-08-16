@@ -7,10 +7,12 @@ This element is **not** all that useful as a card (it can be used for that to), 
 | Name | Type | Default | Description
 | ---- | ---- | ------- | -----------
 | type | string | **Required** | `custom:ext-weblink`
-| name | string | **Required** | The name you want to show.
-| url | string | **Required** | The url you want to open.
-| icon | string | **Required** | The icon you want to show.
+| name | string | **Optional** | The name you want to show.
+| url | string | **Optional** | The url you want to open.
+| icon | string | **Optional** | The icon you want to show.
 | entity | string | **Optional** | The entity you want to the state from (if defined).
+
+You neet to at least define an entity or a name.
 
 ## Installation
 
