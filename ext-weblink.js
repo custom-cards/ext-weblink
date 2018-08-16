@@ -33,19 +33,18 @@ class ExtWebLink extends HTMLElement {
         }
         div {
           flex: 1;
-          padding-right: 8px;
-          padding-left: 8px;
-          padding-top: 8px;
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
         }
         div .state {
           text-align: right;
+          padding: 12px 0px 12px 0px;
         }
         div .name {
           text-align: left;
           overflow: visible;
+          padding: 12px 12px 12px 16px;
           
         }
         div .main {
