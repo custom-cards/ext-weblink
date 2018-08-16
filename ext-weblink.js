@@ -6,7 +6,11 @@ class ExtWebLink extends HTMLElement {
     if (!this.config.entity) {
       var state = "";
     } else {
-      var state = hass.states[this.config.entity].state;
+      if (hass.states[this.config.entity].attributes.unit_of_meassurement) {
+        var state = hass.states[this.config.entity].state+' '+hass.states[this.config.entity].attributes.unit_of_meassurement;
+      } else {
+        var state = hass.states[this.config.entity].state
+      }
     }
     if (this.config.name) {
       var name = this.config.name;
@@ -39,12 +43,12 @@ class ExtWebLink extends HTMLElement {
         }
         div .state {
           text-align: right;
-          padding: 12px 0px 12px 0px;
+          padding: 10px 0px 10px 0px;
         }
         div .name {
           text-align: left;
           overflow: visible;
-          padding: 12px 12px 12px 16px;
+          padding: 10px 12px 10px 16px;
           
         }
         div .main {
