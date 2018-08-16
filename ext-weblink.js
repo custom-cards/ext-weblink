@@ -18,9 +18,6 @@ class ExtWebLink extends HTMLElement {
     } 
     this.innerHTML =`
       <style>
-        ext-weblink.state-card-dialog {
-          width: 100%;
-        }
         a {
           align-items: center;
           color: var(--primary-color);
@@ -35,29 +32,33 @@ class ExtWebLink extends HTMLElement {
           color: var(--paper-item-icon-color);
         }
         div {
-          display: flex;
           flex: 1;
+          padding-right: 8px;
+          padding-left: 8px;
+          padding-top: 8px;
           white-space: nowrap;
-          overflow: visible;
+          overflow: hidden;
           text-overflow: ellipsis;
+        }
+        div .state {
+          text-align: right;
         }
         div .name {
           text-align: left;
-          padding: 8px;
+          overflow: visible;
+          
         }
-        div .state {
-          display: block;
-          text-align: right;
-          padding: 8px;
+        div .main {
+          display: flex;
         }
       </style>
-      <div>
-        <ha-icon icon="${this.config.icon}"></ha-icon>
-        <div class="name">${name}</div>
-        <a href="${this.config.url}" target="_blank">
-          <ha-icon icon="mdi:open-in-new" class="innline"></ha-icon>
-        </a>
-      <div class="state">${state}</div>
+      <div class="main">
+        
+          <ha-icon icon="${this.config.icon}"></ha-icon>
+          <div class="name">${name}</div>
+          <a href="${this.config.url}" target="_blank"><ha-icon icon="mdi:open-in-new" class="innline"></ha-icon></a>
+          <div class="state">${state}</div>
+        
       </div>
     `;
   }
