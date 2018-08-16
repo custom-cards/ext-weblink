@@ -7,7 +7,7 @@ class ExtWebLink extends HTMLElement {
       var state = "";
     } else {
       if (hass.states[this.config.entity].attributes.unit_of_meassurement) {
-        var state = hass.states[this.config.entity].state+' '+hass.states[this.config.entity].attributes.unit_of_meassurement;
+        var state = hass.states[this.config.entity].state+' '+hass.states[this.config.entity].attributes.unit_of_measurement;
       } else {
         var state = hass.states[this.config.entity].state
       }
